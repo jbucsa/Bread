@@ -1,4 +1,8 @@
+// Dependencies
 const express = require('express');
+
+//Configuration 
+
 const breads = express.Router();
 const Bread = require('../models/bread,js')
 
