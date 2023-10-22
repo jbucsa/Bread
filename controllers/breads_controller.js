@@ -1,15 +1,15 @@
 // Dependencies
-const expressBC = require('express');
+const express = require('express');
 
 //Configuration 
 
-const breads = expressBC.Router();
+const breads = express.Router();
 const Bread = require('../models/bread,js')
 
 //INDEX
 breads.get('/', (req, res) =>
 {
-    res.render('index');
+    res.render('Index');
     //res.send(Bread);
 });
 
