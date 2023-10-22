@@ -14,6 +14,12 @@ breads.get('/', (req, res) =>
 
 
 //SHOW
+// SHOW
+breads.get('/:arrayIndex', (req, res) => {
+    res.send(Bread[req.params.arrayIndex])
+  })
+  
+
 // localhost/breads/0
 breads.get('/0', (req, res) =>
 {
