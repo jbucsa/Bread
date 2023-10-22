@@ -11,7 +11,8 @@ breads.get('/', (req, res) =>
 {
     res.render('Index',
     {
-        breads: bread
+        breads: bread,
+        title: 'Index Page'
     });
     // {
     //    breads: 'data from our models',
