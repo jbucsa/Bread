@@ -9,6 +9,12 @@ console.log(PORT);
 
 const app = express();
 
+//Middleware
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
+
+
 app.get('/', (req,res) =>
 {
     res.send('Welcome to an Awesome Application about Breads!!!');
@@ -17,3 +23,4 @@ app.get('/', (req,res) =>
 app.listen(PORT, ()=> {
     console.log('Listening on port: ', PORT);
 });
+
