@@ -4,14 +4,14 @@ const express = require('express');
 //Configuration 
 
 const breads = express.Router();
-const Bread = require('../models/bread,js')
+const bread = require('../models/bread.js')
 
 //INDEX
 breads.get('/', (req, res) =>
 {
     res.render('Index',
     {
-        breads: Bread
+        breads: bread
     });
     // {
     //    breads: 'data from our models',
@@ -27,13 +27,13 @@ breads.get('/', (req, res) =>
 // localhost/breads/0
 breads.get('/0', (req, res) =>
 {
-    res.send(Bread[0]);
+    res.send(bread[0]);
 });
 
 // Dymanic Routes
 // SHOW
 breads.get('/:arrayIndex', (req, res) => {
-    res.send(Bread[req.params.arrayIndex])
+    res.send(bread[req.params.arrayIndex])
   })
   
 

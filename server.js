@@ -15,10 +15,19 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 
 
-app.get('/', (req,res) =>
-{
-    res.send('Welcome to an Awesome Application about Breads!!!');
-});
+// ROUTES
+app.get('/', (req, res) => {
+    res.send('Welcome to an Awesome App about Breads')
+  });
+  
+  // Breads
+  const breadsController = require('./controllers/breads_controller.js');
+  app.use('/breads', breadsController);
+  
+
+
+
+
 
 app.listen(PORT, ()=> {
     console.log('Listening on port: ', PORT);
