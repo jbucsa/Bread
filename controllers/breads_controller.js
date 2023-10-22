@@ -26,9 +26,9 @@ breads.get('/', (req, res) =>
 
 // Static Routes
 // localhost/breads/0
-breads.get('/0', (req, res) =>
+breads.get('/1', (req, res) =>
 {
-    res.send(bread[0]);
+    res.send(bread[1]);
 });
 
 // Dymanic Routes
